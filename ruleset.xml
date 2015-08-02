@@ -159,6 +159,7 @@ Licensed under the GPL v2
     <exclude name="PEAR.Commenting.FileComment.MissingPackageTag"/>
     <exclude name="PEAR.Commenting.FileComment.MissingVersion"/>
     <exclude name="PEAR.Commenting.FileComment.PackageTagOrder"/>
+    <exclude name="PEAR.Commenting.FileComment.SeeTagOrder"/>
     <exclude name="PEAR.Commenting.FileComment.SinceTagOrder"/>
     <exclude name="PEAR.Commenting.FileComment.SubpackageTagOrder"/>
     <exclude name="PEAR.Commenting.FunctionComment.Missing"/>
