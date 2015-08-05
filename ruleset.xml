@@ -345,8 +345,8 @@ Licensed under the GPL v2
     <exclude name="Generic.NamingConventions.ConstructorName.OldStyleCall"/>
   </rule>
 
-  <!-- TODO: Disable for specific files only -->
   <rule ref="Internal.LineEndings.Mixed">
-    <severity>0</severity>
+    <exclude-pattern>framework/Icalendar/test/Horde/Icalendar/ParseTest.php</exclude-pattern>
+    <exclude-pattern>framework/Stream_Filter/test/Horde/Stream/Filter/EolTest.php</exclude-pattern>
   </rule>
 </ruleset>
