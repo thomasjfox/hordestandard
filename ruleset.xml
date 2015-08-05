@@ -238,7 +238,6 @@ Licensed under the GPL v2
     <exclude name="PEAR.Commenting.FunctionComment.ParamNameNoMatch"/>
     <exclude name="PEAR.Commenting.FunctionComment.WrongStyle"/>
     <exclude name="PEAR.Commenting.InlineComment.WrongStyle"/>
-    <exclude name="PEAR.Files.IncludingFile.BracketsNotRequired"/>
     <exclude name="PEAR.Files.IncludingFile.UseInclude"/>
     <exclude name="PEAR.Files.IncludingFile.UseIncludeOnce"/>
     <exclude name="PEAR.Files.IncludingFile.UseRequire"/>
@@ -333,7 +332,6 @@ Licensed under the GPL v2
 
     <!-- Enable for sure -->
     <exclude name="Generic.CodeAnalysis.EmptyStatement.DetectedFOREACH"/>
-    <exclude name="Generic.CodeAnalysis.UnconditionalIfStatement.Found"/>
     <exclude name="Generic.Functions.CallTimePassByReference.NotAllowed"/>
 
     <!-- TODO: Exclude for specific files only -->
@@ -343,6 +341,19 @@ Licensed under the GPL v2
     <exclude name="Generic.Metrics.NestingLevel.MaxExceeded"/>
     <exclude name="Generic.NamingConventions.ConstructorName.OldStyle"/>
     <exclude name="Generic.NamingConventions.ConstructorName.OldStyleCall"/>
+  </rule>
+
+  <!-- File exclusions for specific sniffs -->
+  <rule ref="PEAR.Files.IncludingFile.BracketsNotRequired">
+    <exclude-pattern>znerol/php-stringprep/Znerol/Component/Stringprep/Profile.php</exclude-pattern>
+    <exclude-pattern>bundle/vendor/sabberworm/php-css-parser/tests/quickdump.php</exclude-pattern>
+    <exclude-pattern>vendor/phpunit/phpunit/tests/_files/Inheritance/InheritanceA.php</exclude-pattern>
+  </rule>
+
+  <rule ref="Generic.CodeAnalysis.UnconditionalIfStatement.Found">
+    <exclude-pattern>components/bundle/vendor/phpmd/*</exclude-pattern>
+    <exclude-pattern>components/bundle/vendor/phploc/phploc/tests/_files/source.php</exclude-pattern>
+    <exclude-pattern>framework/Service_Scribd/test/Horde/Service/Scribd/test.php</exclude-pattern>
   </rule>
 
   <rule ref="Internal.LineEndings.Mixed">
