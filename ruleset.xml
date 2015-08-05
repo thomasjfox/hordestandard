@@ -324,14 +324,12 @@ Licensed under the GPL v2
     <exclude name="Generic.CodeAnalysis.UnusedFunctionParameter.Found"/>
     <exclude name="Generic.CodeAnalysis.UselessOverridingMethod.Found"/>
     <exclude name="Generic.NamingConventions.CamelCapsFunctionName.MethodDoubleUnderscore"/>
-    <exclude name="Generic.PHP.DeprecatedFunctions.Deprecated"/>
     <exclude name="Generic.PHP.DisallowShortOpenTag.EchoFound"/>
     <exclude name="Generic.PHP.ForbiddenFunctions.FoundWithAlternative"/>
     <exclude name="Generic.PHP.LowerCaseKeyword.Found"/>
     <exclude name="Generic.Strings.UnnecessaryStringConcat.Found"/>
 
     <!-- Enable for sure -->
-    <exclude name="Generic.CodeAnalysis.EmptyStatement.DetectedFOREACH"/>
     <exclude name="Generic.Functions.CallTimePassByReference.NotAllowed"/>
 
     <!-- TODO: Exclude for specific files only -->
@@ -343,16 +341,37 @@ Licensed under the GPL v2
     <exclude name="Generic.NamingConventions.ConstructorName.OldStyleCall"/>
   </rule>
 
+  <!-- TODO: Minor code improvements needed -->
+  <rule ref="Generic.PHP.DeprecatedFunctions.Deprecated">
+    <exclude-pattern>components/bundle/vendor/phpmd/phpmd/src/test/resources/files/Rule/Naming/ShortVariable/testRuleNotAppliesToShortVariableNameAsForeachLoopIndex.php</exclude-pattern>
+    <exclude-pattern>components/lib/Components/Component/Match.php</exclude-pattern>
+    <exclude-pattern>framework/Date_Parser/lib/Horde/Date/Parser/Locale/Pt.php</exclude-pattern>
+    <exclude-pattern>framework/Db/lib/Horde/Db/SearchParser.php</exclude-pattern>
+    <exclude-pattern>framework/Kolab_Format/lib/Horde/Kolab/Format/Xml/Annotation.php</exclude-pattern>
+    <exclude-pattern>framework/Kolab_FreeBusy/lib/Horde/Kolab/FreeBusy/Cache.php</exclude-pattern>
+    <exclude-pattern>framework/Kolab_FreeBusy/lib/Horde/Kolab/FreeBusy/Driver/Freebusy/Base.php</exclude-pattern>
+    <exclude-pattern>framework/Kolab_FreeBusy/lib/Horde/Kolab/FreeBusy/Driver/Freebusy/Kolab.php</exclude-pattern>
+    <exclude-pattern>framework/Pdf/lib/Horde/Pdf/Writer.php</exclude-pattern>
+    <exclude-pattern>framework/Rampage/lib/Horde/Rampage/Environment.php</exclude-pattern>
+    <exclude-pattern>hermes/lib/Application.php</exclude-pattern>
+    <exclude-pattern>whups/lib/Form/Query/PropertyCriterion.php</exclude-pattern>
+  </rule>
+
+  <rule ref="Generic.CodeAnalysis.EmptyStatement.DetectedFOREACH">
+    <exclude-pattern>components/bundle/vendor/phpmd/*</exclude-pattern>
+    <exclude-pattern>Kolab_Server/test/Horde/Kolab/Server/Integration/MockTest.php</exclude-pattern>
+  </rule>
+
   <!-- File exclusions for specific sniffs -->
   <rule ref="PEAR.Files.IncludingFile.BracketsNotRequired">
-    <exclude-pattern>znerol/php-stringprep/Znerol/Component/Stringprep/Profile.php</exclude-pattern>
     <exclude-pattern>bundle/vendor/sabberworm/php-css-parser/tests/quickdump.php</exclude-pattern>
     <exclude-pattern>vendor/phpunit/phpunit/tests/_files/Inheritance/InheritanceA.php</exclude-pattern>
+    <exclude-pattern>znerol/php-stringprep/Znerol/Component/Stringprep/Profile.php</exclude-pattern>
   </rule>
 
   <rule ref="Generic.CodeAnalysis.UnconditionalIfStatement.Found">
-    <exclude-pattern>components/bundle/vendor/phpmd/*</exclude-pattern>
     <exclude-pattern>components/bundle/vendor/phploc/phploc/tests/_files/source.php</exclude-pattern>
+    <exclude-pattern>components/bundle/vendor/phpmd/*</exclude-pattern>
     <exclude-pattern>framework/Service_Scribd/test/Horde/Service/Scribd/test.php</exclude-pattern>
   </rule>
 
