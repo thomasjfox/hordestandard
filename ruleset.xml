@@ -325,7 +325,6 @@ Licensed under the GPL v2
     <exclude name="Generic.CodeAnalysis.UselessOverridingMethod.Found"/>
     <exclude name="Generic.NamingConventions.CamelCapsFunctionName.MethodDoubleUnderscore"/>
     <exclude name="Generic.PHP.ForbiddenFunctions.FoundWithAlternative"/>
-    <exclude name="Generic.PHP.LowerCaseKeyword.Found"/>
     <exclude name="Generic.Strings.UnnecessaryStringConcat.Found"/>
 
     <!-- Enable for sure -->
@@ -397,6 +396,11 @@ Licensed under the GPL v2
     <exclude-pattern>framework/Service_Scribd/test/Horde/Service/Scribd/test.php</exclude-pattern>
   </rule>
 
+  <rule ref="Generic.PHP.LowerCaseKeyword.Found">
+    <exclude-pattern>components/bundle/vendor/*</exclude-pattern>
+    <exclude-pattern>framework/Test/bundle/vendor/phpunit/*</exclude-pattern>
+  </rule>
+
   <rule ref="Internal.LineEndings.Mixed">
     <exclude-pattern>framework/Icalendar/test/Horde/Icalendar/ParseTest.php</exclude-pattern>
     <exclude-pattern>framework/Stream_Filter/test/Horde/Stream/Filter/EolTest.php</exclude-pattern>
@@ -415,4 +419,5 @@ Licensed under the GPL v2
     <exclude-pattern>turba/templates/*</exclude-pattern>
     <exclude-pattern>wicked/templates/*</exclude-pattern>
   </rule>
+
 </ruleset>
