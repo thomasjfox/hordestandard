@@ -333,7 +333,6 @@ Licensed under the GPL v2
     <exclude name="Generic.Functions.CallTimePassByReference.NotAllowed"/>
 
     <!-- TODO: Exclude for specific files only -->
-    <exclude name="Generic.Classes.DuplicateClassName.Found"/>
     <exclude name="Generic.CodeAnalysis.EmptyStatement.DetectedFOR"/>
     <exclude name="Generic.Files.InlineHTML.Found"/>
     <exclude name="Generic.Metrics.NestingLevel.MaxExceeded"/>
@@ -355,6 +354,30 @@ Licensed under the GPL v2
     <exclude-pattern>framework/Rampage/lib/Horde/Rampage/Environment.php</exclude-pattern>
     <exclude-pattern>hermes/lib/Application.php</exclude-pattern>
     <exclude-pattern>whups/lib/Form/Query/PropertyCriterion.php</exclude-pattern>
+  </rule>
+
+  <rule ref="Generic.Classes.DuplicateClassName.Found">
+    <exclude-pattern>bundles/*</exclude-pattern>
+    <exclude-pattern>components/bundle/vendor/composer/ClassLoader.php</exclude-pattern>
+    <exclude-pattern>components/bundle/vendor/phpmd/*</exclude-pattern>
+    <exclude-pattern>components/bundle/vendor/phpunit/*</exclude-pattern>
+    <exclude-pattern>components/bundle/vendor/sebastian/*</exclude-pattern>
+    <exclude-pattern>components/bundle/vendor/symfony/dependency-injection/*</exclude-pattern>
+    <exclude-pattern>framework/Css_Parser/bundle/vendor/composer/ClassLoader.php</exclude-pattern>
+    <exclude-pattern>framework/Form/lib/Horde/Form/Type.php</exclude-pattern>
+    <exclude-pattern>framework/Kolab_Storage/lib/Horde/Kolab/Storage/Folder/Base.php</exclude-pattern>
+    <exclude-pattern>framework/Model/lib/Horde/Core/Form/daterendererchanges.php</exclude-pattern>
+    <exclude-pattern>framework/Pgp/bundle/vendor/composer/ClassLoader.php</exclude-pattern>
+    <exclude-pattern>framework/Stringprep/bundle/vendor/composer/ClassLoader.php</exclude-pattern>
+    <exclude-pattern>framework/Test/bundle/vendor/composer/ClassLoader.php</exclude-pattern>
+    <exclude-pattern>framework/Test/bundle/vendor/phpunit/*</exclude-pattern>
+    <exclude-pattern>horde/content/lib/Tagger.php</exclude-pattern>
+    <exclude-pattern>horde/content/lib/Types/Manager.php</exclude-pattern>
+    <exclude-pattern>shout/lib/Forms/ConferenceForm.php</exclude-pattern>
+    <exclude-pattern>shout/lib/Forms/RecordingForm.php</exclude-pattern>
+    <exclude-pattern>turba/test/Turba/Stub/Hooks.php</exclude-pattern>
+    <exclude-pattern>whups/lib/tests/TestBase.php</exclude-pattern>
+    <exclude-pattern>wicked/lib/Text_Wiki/Parse/*</exclude-pattern>
   </rule>
 
   <rule ref="Generic.CodeAnalysis.EmptyStatement.DetectedFOREACH">
