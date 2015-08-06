@@ -324,7 +324,6 @@ Licensed under the GPL v2
     <exclude name="Generic.CodeAnalysis.UnusedFunctionParameter.Found"/>
     <exclude name="Generic.CodeAnalysis.UselessOverridingMethod.Found"/>
     <exclude name="Generic.NamingConventions.CamelCapsFunctionName.MethodDoubleUnderscore"/>
-    <exclude name="Generic.PHP.DisallowShortOpenTag.EchoFound"/>
     <exclude name="Generic.PHP.ForbiddenFunctions.FoundWithAlternative"/>
     <exclude name="Generic.PHP.LowerCaseKeyword.Found"/>
     <exclude name="Generic.Strings.UnnecessaryStringConcat.Found"/>
@@ -401,5 +400,19 @@ Licensed under the GPL v2
   <rule ref="Internal.LineEndings.Mixed">
     <exclude-pattern>framework/Icalendar/test/Horde/Icalendar/ParseTest.php</exclude-pattern>
     <exclude-pattern>framework/Stream_Filter/test/Horde/Stream/Filter/EolTest.php</exclude-pattern>
+  </rule>
+
+  <rule ref="Internal.NoCodeFound">
+    <exclude-pattern>ansel/gallery/index.php</exclude-pattern>
+    <exclude-pattern>ansel/templates/*</exclude-pattern>
+    <exclude-pattern>components/bundle/vendor/sebastian/finder-facade/tests/*</exclude-pattern>
+    <exclude-pattern>folks/templates/*</exclude-pattern>
+    <exclude-pattern>framework/Imsp/lib/Horde/Imsp/Client/Mock.php</exclude-pattern>
+    <exclude-pattern>horde/content/lib/*</exclude-pattern>
+    <exclude-pattern>mnemo/note/index.php</exclude-pattern>
+    <exclude-pattern>mnemo/notepads/index.php</exclude-pattern>
+    <exclude-pattern>turba/addressbooks/index.php</exclude-pattern>
+    <exclude-pattern>turba/templates/*</exclude-pattern>
+    <exclude-pattern>wicked/templates/*</exclude-pattern>
   </rule>
 </ruleset>
