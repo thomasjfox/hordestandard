@@ -243,7 +243,6 @@ Licensed under the GPL v2
     <exclude name="PEAR.Files.IncludingFile.UseRequire"/>
     <exclude name="PEAR.Files.IncludingFile.UseRequireOnce"/>
     <exclude name="PEAR.Functions.FunctionCallSignature.EmptyLine"/>
-    <exclude name="PEAR.Functions.ValidDefaultValue.NotAtEnd"/>
     <exclude name="PEAR.NamingConventions.ValidClassName.Invalid"/>
     <exclude name="PEAR.NamingConventions.ValidFunctionName.MethodDoubleUnderscore"/>
     <exclude name="PEAR.WhiteSpace.ScopeClosingBrace.BreakIdent"/>
@@ -336,6 +335,13 @@ Licensed under the GPL v2
     <exclude name="Generic.Metrics.NestingLevel.MaxExceeded"/>
     <exclude name="Generic.NamingConventions.ConstructorName.OldStyle"/>
     <exclude name="Generic.NamingConventions.ConstructorName.OldStyleCall"/>
+  </rule>
+
+  <rule ref="PEAR.Functions.ValidDefaultValue.NotAtEnd">
+    <exclude-pattern>framework/Test/bundle/vendor/phpspec/*</exclude-pattern>
+    <!-- TODO: The two files below need fixing -->
+    <exclude-pattern>framework/Dav/lib/Horde/Dav/Collection.php</exclude-pattern>
+    <exclude-pattern>framework/Imap_Client/lib/Horde/Imap/Client/Exception/ServerResponse.php</exclude-pattern>
   </rule>
 
   <!-- TODO: Minor code improvements needed -->
